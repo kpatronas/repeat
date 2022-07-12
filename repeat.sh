@@ -45,14 +45,14 @@ done
 
 while true
 do
-  $COMMAND
+  eval $COMMAND
   STATUS=$?
   if [ $STATUS -eq $EXPECTED ]
   then
-    $SUCCESS
+    eval $SUCCESS
     exit $STATUS
   else
-    $FAILURE
+    eval $FAILURE
     COUNTER=$((COUNTER+1))
     if [ $COUNTER -eq $REPEAT ]
     then
